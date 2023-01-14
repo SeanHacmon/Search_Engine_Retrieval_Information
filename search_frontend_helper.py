@@ -78,10 +78,7 @@ def read_posting_list(inverted, w, bucket_name):
     return posting_list
 
 
-# # Search
-
-
-
+# Search
 
 # loading inverted index from title bucket
 my_bucket = client.bucket('sean_bucket_title')
@@ -109,8 +106,7 @@ def get_search_title(query):
     return(res)
 
 
-# ## Search Body
-
+# Search Body
 
 # loading inverted index from body bucket
 my_bucket = client.bucket('sean_bucket_body')
@@ -136,7 +132,6 @@ def cosine_similarity(search_query, index):
  
 
 
-
 # get list of top N ranked pairs (doc_id, score)
 def get_top_n(sim_dict,N=3):
   return sorted([(doc_id,score) for doc_id, score in sim_dict.items()], key = lambda x: x[1],reverse=True)[:N]
@@ -150,7 +145,7 @@ def get_search_body(query):
   
 
 
-# ## Search Anchor
+# Search Anchor
 
 my_bucket = client.bucket('sean_bucket_anchor')
 idx_anchor = pickle.loads(my_bucket.get_blob('postings_gcp/index_anchor.pkl').download_as_string())
@@ -177,7 +172,7 @@ def get_search_anchor(query):
   # return jsonify(res)
 
 
-# # Page rank
+# Page rank
 
 
 storage_client = storage.Client()
@@ -208,7 +203,7 @@ def page_rank(wiki_id,page_rank_dict):
     return lst_pagerank
 
 
-# # Page view
+# Page view
 
 
 pv = pickle.loads(bucket.get_blob('page_view.pkl').download_as_string())
@@ -226,7 +221,7 @@ pr_max, pr_min, pr_mean = (max(pr), min(pr), np.mean(list(pr.values())))
 
 
 
-#BM25
+# BM25
 
 avg_doclen= 319.5242353411845
 N = 6348910
@@ -269,7 +264,7 @@ def BM25(search_query, index, k, b,avg_doclen,N, threshHold=200):
 my_bucket = client.bucket('sean_bucket_stem_title')
 idx_title_stem = pickle.loads(my_bucket.get_blob('postings_gcp/index_stemmed_title.pkl').download_as_string())
 
-# # Combined Search
+# Combined Search
 
 def search_title_helper(query):
     res = []
