@@ -102,5 +102,11 @@ While each the functions have received different weights for total score calcula
 ## Validation Process
 
 
-hold all the functions used for type of searches + the best 2 function trys of the search function
 <img width="598" alt="Screen Shot 2023-01-15 at 21 51 55" src="https://user-images.githubusercontent.com/100718234/212563826-426e020f-4939-4981-bcfd-345c19f1a5a5.png">
+
+<img width="527" alt="Screen Shot 2023-01-15 at 21 56 16" src="https://user-images.githubusercontent.com/100718234/212564173-364cf74f-790a-4712-a372-7bc16c88751f.png">
+
+<img width="603" alt="Screen Shot 2023-01-15 at 21 58 31" src="https://user-images.githubusercontent.com/100718234/212564185-d6665c6b-1e2d-4e40-8f4f-7b9fb43015bf.png">
+
+<img width="527" alt="Screen Shot 2023-01-15 at 21 58 04" src="https://user-images.githubusercontent.com/100718234/212564195-b534780e-92d5-4f37-b761-a5766e0d15c2.png">
+
