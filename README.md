@@ -69,9 +69,19 @@ the best formula we have gotten is BM25 + Page rank + Page views + Improved Anch
 while each the functions have received different weights for total score calculation.
 
 #### search_title()
-returns the best results based on title index ordered by the title tf
+returns the best results based on title index ordered by the title tf 
 
 #### search_anchor() 
 returns the best results based on anchor index ordered by the anchor tf
 
+#### search_body()
+returns the best 100 results using cosine similarity & tfidf
 
+#### get_pagerank()
+returns list of values for each doc id in the given query based on pagerank pkl file that we load from the title bucket
+
+#### get_pageview()
+returns list of values for each doc id in the given query based on pageview pkl file that we load from the title bucket
+
+## search_frontend_helper
+hold all the functions used for type of searches + the best 2 function trys of the search function
