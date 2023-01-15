@@ -86,6 +86,6 @@ returns list of values for each doc id in the given query based on pageview pkl 
 ## search_frontend_helper
 
 #### BM25
-we used the formula : &sigma; (idf * freq)*(k+1) / (freq*B*k)
+we used the formula : $\sum$ (idf * freq)*(k+1) / (freq*B*k)
 
 hold all the functions used for type of searches + the best 2 function trys of the search function
