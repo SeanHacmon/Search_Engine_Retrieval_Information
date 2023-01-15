@@ -2,7 +2,7 @@
 
 ## Index_Creation 
 
-### Index Functions 
+#### Index Functions 
 
 tokenize_and_remove_sw(text) - tokenize a string and remove stop words.
 
@@ -33,9 +33,12 @@ createStemmedIndex(bucket_name, index_name) - same as createIndex just apply ste
 
 ## PR_PV
 
-### Page rank upload - creates a pandas dataframe of the page rank results + transforming into a dictionary and stores it at the title bucket as a 
-                       pkl file.
-### Page view upload - stores the Counter dicionary of the page view results in the title bucket as a pkl file.
+#### Page rank upload
+creates a pandas dataframe of the page rank results + transforming into a dictionary and stores it at the title bucket as a 
+pkl file.
+
+#### Page view upload
+stores the Counter dicionary of the page view results in the title bucket as a pkl file.
 
 ## Search Tests 
 
@@ -58,6 +61,17 @@ each index will hold 5 dictionaries :
   posting_locs - {bin file : offset}
   title_dict - {doc_id: title}
 
+## search_frontend
 
+#### search()
+returns the best 100 results depending on usage of helper functions search_frontend_helper file.
+the best formula we have gotten is BM25 + Page rank + Page views + Improved Anchor + Improved Title + Title Stemming 
+while each the functions have received different weights for total score calculation.
+
+#### search_title()
+returns the best results based on title index ordered by the title tf
+
+#### search_anchor() 
+returns the best results based on anchor index ordered by the anchor tf
 
 
