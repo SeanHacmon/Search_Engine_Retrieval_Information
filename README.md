@@ -110,3 +110,7 @@ While each the functions have received different weights for total score calcula
 
 <img width="527" alt="Screen Shot 2023-01-15 at 21 58 04" src="https://user-images.githubusercontent.com/100718234/212564195-b534780e-92d5-4f37-b761-a5766e0d15c2.png">
 
+## Results
+##### Precision - 0.592
+##### Recall - 1
+
